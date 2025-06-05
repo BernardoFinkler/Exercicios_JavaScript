@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NacionalidadeTitulo</title>
+</head>
+<body>
+    <h1>Verificador de estrangeiros</h1>
+    De qual pais voce e: <input type="text" name="paistxt" id="paistxt">
+    <input type="button" value="verifica" onclick="executa()">
+    <div id="nac">
+
+    </div>
+    <script>
+        function executa(){
+        var nacr = window.document.querySelector('input#paistxt')
+        var nac = window.document.querySelector('div#nac')
+
+        nac.innerHTML = `<p>Seu pais e <strong>${nacr.value}</strong> voce e</p>`
+
+        if (nacr.value == `Brasil`){
+            nac.innerHTML += `<p>Brasileiro!</p>`
+        }else{
+            nac.innerHTML += `<p>estrangeiro!</p>`
+        }
+
+        }
+    </script>
+</body>
+</html>
